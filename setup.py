@@ -6,7 +6,7 @@ with open("README.md", "r") as fh:
 
 setuptools.setup(
     name="messagehub",
-    version="0.1.0",
+    version="0.1.1",
     author="xinqiyang",
     author_email="xinqiyang@gmail.com",
     description="messagehub: crypto and traditional financial data hub",
