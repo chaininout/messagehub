@@ -16,6 +16,12 @@ transaction: blockchain  symbol large transactions
 $ pip install messagehub
 ```
 
+在国内安装：    
+```
+$ pip install messagehub -i https://pypi.tuna.tsinghua.edu.cn/simple
+```
+ 
+
 ### 使用方式
 
 ```

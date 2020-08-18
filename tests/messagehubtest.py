@@ -13,7 +13,14 @@ class MessageHubTest(unittest.TestCase):
         # use api token
         token = "7194f650afe74aedb7a2a1e5ceba95da76dc15453ea3e44de0f1171aac913347"
         api = mh.api(token)
-        print(api)
+        owner = "binance"
+        blockchain = "bitcoin"
+        symbol = "btc"
+        df = mh.transaction(owner, blockchain, symbol, api_instance=api)
+        if df is not None:
+            print(df.head(5))
+            df.to_csv('transaction1.csv', index=None)
+
 
     def test_get_bar(self):
         print("message hub test")
