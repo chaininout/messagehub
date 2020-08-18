@@ -78,6 +78,6 @@ df = mh.transaction(owner, blockchain, symbol)
 [MIT](https://github.com/chaininout/messagehub/blob/master/LICENSE)
 
 
-[version-badge]:   https://github.com/chaininout/messagehub/blob/master/version-0.1-brightgreen.svg
-[version-link]:    https://pypi.python.org/pypi/messagehub/
-[license-badge]:   https://github.com/chaininout/messagehub/blob/master/license.svg
+[version-badge]:   https://raw.githubusercontent.com/chaininout/messagehub/master/version-0.1-brightgreen.svg
+[version-link]:    https://pypi.org/project/messagehub/
+[license-badge]:   https://raw.githubusercontent.com/chaininout/messagehub/master/license.svg
