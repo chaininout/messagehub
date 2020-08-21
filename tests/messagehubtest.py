@@ -145,3 +145,19 @@ class MessageHubTest(unittest.TestCase):
         symbol = "btc"
         ret = mh.wallet(owner, blockchain, symbol)
         print(ret)
+
+    def test_get_stock(self):
+        a = "stock"
+        code = "123"
+        exchange = "sh"  # sz
+        t = "1d"
+        ret = mh.bar(code, exchange=exchange, asset=a, freq=t)
+        print(ret)
+
+    def test_get_spot(self):
+        a = "spot"
+        code = "ETH/USDT"
+        exchange = "binance"  # sz
+        t = "1d"
+        ret = mh.bar(code, exchange=exchange, asset=a, freq=t, limit=500)
+        print(ret)
