@@ -21,7 +21,6 @@ class MessageHubTest(unittest.TestCase):
             print(df.head(5))
             df.to_csv('transaction1.csv', index=None)
 
-
     def test_get_bar(self):
         print("message hub test")
         code = "600123"
@@ -144,14 +143,6 @@ class MessageHubTest(unittest.TestCase):
         blockchain = "bitcoin"
         symbol = "btc"
         ret = mh.wallet(owner, blockchain, symbol)
-        print(ret)
-
-    def test_get_stock(self):
-        a = "stock"
-        code = "123"
-        exchange = "sh"  # sz
-        t = "1d"
-        ret = mh.bar(code, exchange=exchange, asset=a, freq=t)
         print(ret)
 
     def test_get_spot(self):
