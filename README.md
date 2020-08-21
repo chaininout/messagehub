@@ -10,19 +10,19 @@ wallet data: blockchain labeling wallet
 transaction: blockchain  symbol large transactions 
 
 
-### 安装
+### Install
 
 ```
 $ pip install messagehub
 ```
 
-在国内安装：    
+In China：    
 ```
 $ pip install messagehub -i https://pypi.tuna.tsinghua.edu.cn/simple
 ```
  
 
-### 使用方式
+### Usage
 
 ```
 import messagehub as mh
@@ -30,13 +30,9 @@ import messagehub as mh
 token = "getapitokens"
 api = mh.api(token)
 
-# get stock 600123 ohlcv
-code = "600123"
-df = mh.bar(code)
-
-# get crypto btc ohlcv in okex
-code = "BTC"
-exchange = "okex"
+# get crypto btc ohlcv in binance
+code = "btcusdt"
+exchange = "binance"
 asset = "spot"
 df = mh.bar(code, exchange=exchange, asset=asset)
 
