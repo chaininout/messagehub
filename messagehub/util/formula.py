@@ -173,7 +173,7 @@ def MFI(DF, N):  # 资金指标
     C = DF['c']
     H = DF['h']
     L = DF['l']
-    VOL = DF['vol']
+    VOL = DF['v']
     TYP = (C + H + L) / 3
     V1 = SUM(IF(TYP > REF(TYP, 1), TYP * VOL, 0), N) / \
         SUM(IF(TYP < REF(TYP, 1), TYP * VOL, 0), N)
@@ -230,7 +230,7 @@ def RSI(DF, N1, N2, N3):  # 相对强弱指标RSI1:SMA(MAX(CLOSE-LC,0),N1,1)/SMA
 def ADTM(DF, N, M):  # 动态买卖气指标
     HIGH = DF['h']
     LOW = DF['l']
-    OPEN = DF['open']
+    OPEN = DF['o']
     DTM = IF(OPEN <= REF(OPEN, 1), 0, MAX(
         (HIGH - OPEN), (OPEN - REF(OPEN, 1))))
     DBM = IF(OPEN >= REF(OPEN, 1), 0, MAX((OPEN - LOW), (OPEN - REF(OPEN, 1))))
