@@ -132,10 +132,10 @@ class MessageHubTest(unittest.TestCase):
 
     def test_get_defi(self):
         print("get defi")
-        contract_address = "0x06d6d9c4c9eadcb0319b46b7cd05358915bda97a"
-        ret = mh.defi(contract_address)
+        contract_address = "0x0d4a11d5eeaac28ec3f61d100daf4d40471f1852"
+        ret = mh.defi(contract_address, offset=1, limit=100)
         print(ret.head(5))
-        ret.to_csv('defi.csv', index=None)
+        ret.to_csv('defi_eth_usdt.csv', index=None)
 
     def test_get_nocheck(self):
         print("get nocheck -----------")
@@ -152,3 +152,10 @@ class MessageHubTest(unittest.TestCase):
         t = "1d"
         ret = mh.bar(code, exchange=exchange, asset=a, freq=t, limit=500)
         print(ret)
+
+    # get listing
+    def test_get_info(self):
+        ret = mh.info()
+        ret.to_csv('info.csv', index=None)
+        print(ret)
+

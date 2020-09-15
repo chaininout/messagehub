@@ -60,6 +60,7 @@ class DataApi:
             if result['code'] != 200:
                 raise Exception(result['message'])
             data = result['data']
+
             # 返回数据的字段，以及数据的items
             # print("------------")
             # print(data)
