@@ -13,7 +13,7 @@ fi
 
 echo $DIR
 
-cd $DIR && rm -rf build *.egg-info dist && pip3 uninstall messagehub -y && python3 setup.py bdist_wheel && pip3 install dist/messagehub-0.1.1-py3-none-any.whl
+cd $DIR && rm -rf build *.egg-info dist && pip3 uninstall messagehub -y && python3 setup.py bdist_wheel && pip3 install dist/messagehub-0.1.2-py3-none-any.whl
 
 pip3 list | grep messagehub
 echo "=====messagehub install ok====="
